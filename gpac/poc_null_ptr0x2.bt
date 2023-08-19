@@ -1,0 +1,82 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 255
+ visualProfileLevelIndication 1
+ sceneProfileLevelIndication 1
+ graphicsProfileLevelIndication 255
+ ODProfileLevelIndication 255
+ esDescr [
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    objectTypeIndication 255
+    streamType 1
+    bufferSizeDB 4096
+   }
+   slConfigDescr SLConfigDescriptor {
+    useAccessUnitStartFlag true
+    useAccessUnitEndFlag true
+    useTimeStampsFlag true
+    timeStampResolution 1000
+    timeStampLength 32
+   }
+  }
+  ES_Descriptor {
+   ES_ID 2
+   OCR_ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    objectTypeIndication 255
+    streamType 3
+    bufferSizeDB 60
+    decSpecificInfo DecoderSpecificInfo {
+     info %52%B0
+    }
+   }
+   slConfigDescr SLConfigDescriptor {
+    useAccessUnitStartFlag true
+    useAccessUnitEndFlag true
+    useTimeStampsFlag true
+    timeStampResolution 1000
+    timeStampLength 32
+   }
+  }
+ ]
+}
+
+
+RAP AT 0 {
+  UPDATE OD [
+   ObjectDescriptor {
+    objectDescriptorID 11
+    esDescr [
+     ES_Descriptor {
+      ES_ID 3
+      OCR_ES_ID 1
+      decConfigDescr DecoderConfigDescriptor {
+       objectTypeIndication 32
+       streamType 4
+       bufferSizeDB 38016
+       maxBitrate 1239600
+       avgBitrate 149137
+       decSpecificInfo DecoderSpecificInfo {
+        info %00%00%01%B0%03%00%00%01%B5%09%00%00%01%0B%00%00%01%20%00%84%40%06%68%2A%20%90%A3%1F
+       }
+      }
+      slConfigDescr SLConfigDescriptor {
+       useAccessUnitStartFlag true
+       useAccessUnitEndFlag true
+       useRandomAccessPointFlag true
+       useTimeStampsFlag true
+       timeStampResolution 1000
+       timeStampLength 32
+      }
+      muxInfo MuxInfo {
+       fileName "./fxxk#3"
+       streamFormat "MP4"
+      }
+     }
+    ]
+   }
+  ]
+}
+
